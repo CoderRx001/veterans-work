@@ -26,3 +26,20 @@
     // padding: 5px 45px 0px 2px;
   }
 }
+
+.image-cropper {
+    height: 300px;
+    width: 300px;
+    border-color: white;
+    box-shadow: 0px 3px 3px #7a7a7f;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+  }
+.round-img{
+  height: auto;
+  width: 100%;
+}

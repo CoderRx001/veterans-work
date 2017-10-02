@@ -14,6 +14,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @aboutpage = true
     render "about.html"
   end
 end
