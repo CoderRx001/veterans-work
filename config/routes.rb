@@ -36,5 +36,10 @@ Rails.application.routes.draw do
   resources :quotes
   resources :contracts
   resources :orders
+  end
+
+  resources :chat_rooms, only: [:new, :create, :show, :index]
+  root 'chat_rooms#index' 
+  end
 end
 
