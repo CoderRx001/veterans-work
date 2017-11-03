@@ -63,8 +63,8 @@ class QuotesController < ApplicationController
     @company = @quote.company
     @now = Time.current 
     @view_date = @quote.view_date
-    if current_customer && view_date != null  
-      @quote.update(customer_viewed: true, view_date: now) 
+    if current_customer && !@view_date 
+      @quote.update(customer_viewed: true, view_date: Time.now) 
     end
   end
 

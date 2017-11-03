@@ -2,10 +2,6 @@ $(document).ready(function() {
   // var startDate = document.getElementById('quote_start_date');
   // var endDate = document.getElementById('quote_completion_date_estimate');
 
-  // startDate.addEventListener('change', function() {
-  //   endDate.min = startDate.value;
-  // })
-  // Broken code
 
   // Get the modal
   var declinedModal = document.getElementById('declined');
@@ -49,15 +45,3 @@ $(document).ready(function() {
 
 });
 
-<<<<<<< HEAD
-  startDate.addEventListener('change', function() {
-    endDate.min = startDate.value;
-  })
-});
-
-
-// var viewed=document.getElementById('customer_viewed');
-//   viewed.onclick=viewCheck;
-// `insert into contract (view_date) values (to_timestamp(${Date.now()} / 1000.0))` 
-=======
->>>>>>> d0c12fc11e614feee5c4b43989adf1dd1ff36407
