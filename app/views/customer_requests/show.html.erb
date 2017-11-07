@@ -17,7 +17,6 @@
         <p>City: <%= @request.city %></p>
         <p>State: <%= @request.state %></p>
         <p>Zipcode: <%= @request.zipcode %></p>
-        <p> Viewed: <%= @quote.view_date %>  </p>
       </div>
       <% if current_company %>
         <%= link_to 'New Quote', "/quotes/new?customer_request_id=#{@request.id}" %>

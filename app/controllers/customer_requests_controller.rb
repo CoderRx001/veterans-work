@@ -44,7 +44,7 @@ class CustomerRequestsController < ApplicationController
   end
 
   def show
-    @quote = Quote.find(params[:id])
+    # @quote = Quote.find(params[:id])
     @request = CustomerRequest.find(params[:id])
   end
 
