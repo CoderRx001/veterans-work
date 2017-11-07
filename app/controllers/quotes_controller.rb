@@ -1,6 +1,7 @@
 class QuotesController < ApplicationController
   def index
     if current_customer || current_company
+    @quotes = Quote.order(view_date: :desc)
 
       current = current_customer || current_company
       @open_quotes = current.open_quotes.order('start_date')

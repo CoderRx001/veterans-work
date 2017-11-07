@@ -2,7 +2,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h2>Open Quotes</h2>
-        <table id="open_quotes" class="table table-hover table-condensed">
+        <table id="open_quotes" class="table table-hover table-condensed" >
           <thead>
             <tr>
               <th>Request Description</th>
@@ -11,11 +11,13 @@
               <th>Start Date</th>
               <th>Completion Date Estimate</th>
               <th>Total Cost Estimate</th>
+              <th> View date </th>
+
               <th>Quote Details</th>
             </tr>
           </thead>
           <tbody>
-            <% @open_quotes.each do |open_quote| %>
+            <% @open_quotes.sort(view_date: :desc).each do |open_quote| %>
             <tr>
               <td><%= open_quote.customer_request.description %></td>
               <td><%= open_quote.customer_request.expires_date %></td>
@@ -23,6 +25,9 @@
               <td><%= open_quote.start_date.strftime("%B %e, %Y") %></td>
               <td><%= open_quote.completion_date_estimate.strftime("%B %e, %Y") %></td>
               <td><%= number_to_currency(open_quote.total_cost_estimate) %></td>
+              
+              <td><%= @quotes.view_date %></td>
+              
               <td><a href="/quotes/<%= open_quote.id %>"><button class="btn btn-success">Details</button></a></td>
             </tr>
             <% end %>
